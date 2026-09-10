@@ -13,7 +13,6 @@ import javax.swing.JLabel;
 import javax.swing.JTextArea;
 import javax.swing.SwingConstants;
 import javax.swing.JPanel;
-import javax.swing.JScrollPane;
 
 public class Center {
     private JPanel centerPanel = null;
@@ -28,8 +27,11 @@ public class Center {
         displayLabel.setFont(displayLabel.getFont().deriveFont(Font.BOLD, 18f));
         centerPanel.add(displayLabel, BorderLayout.NORTH);
 
-        Score score = new Score();
-        centerPanel.add(score, BorderLayout.CENTER);
+        Score scoreAway = new Score();
+        centerPanel.add(scoreAway, BorderLayout.WEST);
+
+        Score scoreHome = new Score();
+        centerPanel.add(scoreHome, BorderLayout.EAST);
     }
 
     // return elements so we can access their attributes

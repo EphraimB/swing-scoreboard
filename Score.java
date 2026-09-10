@@ -1,3 +1,8 @@
+import java.awt.BorderLayout;
+import java.awt.FlowLayout;
+import java.awt.GridLayout;
+
+import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -13,15 +18,51 @@ public class Score extends JPanel {
     int score = 0;
 
     public Score() {
-        teamTextField = new JTextField();
+        setLayout(new BorderLayout());
+
+        // Team information
+        JPanel teamPanel = new JPanel();
+        teamPanel.setLayout(new BoxLayout(teamPanel, BoxLayout.Y_AXIS));
+        teamTextField = new JTextField(1);
+        teamPanel.add(teamTextField);
 
         teamLabel = new JLabel("Not set");
+        teamPanel.add(teamLabel);
 
-        incrementButton = new JButton("+");
+        add(teamPanel, BorderLayout.NORTH);
 
-        scoreLabel = new JLabel("" + score);
+        // Score controls - all horizontal
+        JPanel scorePanel = new JPanel(new FlowLayout());
 
         decrementButton = new JButton("-");
+        scorePanel.add(decrementButton);
+
+        scoreLabel = new JLabel("" + score);
+        scorePanel.add(scoreLabel);
+
+        incrementButton = new JButton("+");
+        scorePanel.add(incrementButton);
+
+        add(scorePanel, BorderLayout.CENTER);
+
+        // Update team name when Enter is pressed
+        teamTextField.addActionListener(e -> {
+            teamLabel.setText(teamTextField.getText());
+        });
+
+        // Increment score
+        incrementButton.addActionListener(e -> {
+            score++;
+            scoreLabel.setText(String.valueOf(score));
+        });
+
+        // Decrement score
+        decrementButton.addActionListener(e -> {
+            if (score > 0) {
+                score--;
+            }
+            scoreLabel.setText(String.valueOf(score));
+        });
     }
 
     // return elements so we can access their attributes
@@ -29,19 +70,4 @@ public class Score extends JPanel {
         return teamTextField;
     }
 
-    public JLabel getTeamLabel() {
-        return teamLabel;
-    }
-
-    public JButton getIncrementButton() {
-        return incrementButton;
-    }
-
-    public JLabel getScoreLabel() {
-        return scoreLabel;
-    }
-
-    public JButton getDecrementButton() {
-        return decrementButton;
-    }
 }
