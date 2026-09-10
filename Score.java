@@ -1,6 +1,5 @@
 import java.awt.BorderLayout;
 import java.awt.FlowLayout;
-import java.awt.GridLayout;
 
 import javax.swing.BoxLayout;
 import javax.swing.JButton;
