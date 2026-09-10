@@ -1,8 +1,9 @@
 import javax.swing.JButton;
 import javax.swing.JLabel;
+import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-public class Score {
+public class Score extends JPanel {
     private JTextField teamTextField = null;
     private JLabel teamLabel = null;
     private JLabel scoreLabel = null;

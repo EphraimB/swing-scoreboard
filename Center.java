@@ -28,15 +28,8 @@ public class Center {
         displayLabel.setFont(displayLabel.getFont().deriveFont(Font.BOLD, 18f));
         centerPanel.add(displayLabel, BorderLayout.NORTH);
 
-        textArea = new JTextArea(
-                "This is a JTextArea.\n" +
-                        "You can type anything here.\n" +
-                        "It demonstrates a multi-line component.");
-        textArea.setLineWrap(true);
-        textArea.setWrapStyleWord(true);
-
-        JScrollPane scrollPane = new JScrollPane(textArea);
-        centerPanel.add(scrollPane, BorderLayout.CENTER);
+        Score score = new Score();
+        centerPanel.add(score, BorderLayout.CENTER);
     }
 
     // return elements so we can access their attributes
