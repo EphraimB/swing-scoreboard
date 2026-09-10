@@ -19,6 +19,8 @@ public class Score {
 
         incrementButton = new JButton("+");
 
+        scoreLabel = new JLabel("" + score);
+
         decrementButton = new JButton("-");
     }
 
