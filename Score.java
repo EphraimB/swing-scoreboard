@@ -1,6 +1,5 @@
 import javax.swing.JButton;
 import javax.swing.JLabel;
-import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 public class Score {
@@ -35,6 +34,10 @@ public class Score {
 
     public JButton getIncrementButton() {
         return incrementButton;
+    }
+
+    public JLabel getScoreLabel() {
+        return scoreLabel;
     }
 
     public JButton getDecrementButton() {
