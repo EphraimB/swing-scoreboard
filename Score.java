@@ -4,35 +4,38 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 public class Score {
+    private JTextField teamTextField = null;
     private JLabel teamLabel = null;
     private JLabel scoreLabel = null;
     private JButton incrementButton = null;
-     private JButton decrementButton = null;
+    private JButton decrementButton = null;
 
     int score = 0;
 
     public Score() {
-        teamLabel = new JLabel("Not set");
-        headerPanel.add(greetingField);
+        teamTextField = new JTextField();
 
-        updateBtn = new JButton("Submit");
-        headerPanel.add(updateBtn);
+        teamLabel = new JLabel("Not set");
+
+        incrementButton = new JButton("+");
+
+        decrementButton = new JButton("-");
     }
 
     // return elements so we can access their attributes
-    public JPanel getHeaderPanel() {
-        return headerPanel;
+    public JTextField getTextField() {
+        return teamTextField;
     }
 
-    public JLabel getGreetingLabel() {
-        return greetingLabel;
+    public JLabel getTeamLabel() {
+        return teamLabel;
     }
 
-    public JTextField getGreetingField() {
-        return greetingField;
+    public JButton getIncrementButton() {
+        return incrementButton;
     }
 
-    public JButton getUpdateButton() {
-        return updateBtn;
+    public JButton getDecrementButton() {
+        return decrementButton;
     }
 }
