@@ -1,0 +1,2 @@
+I got help from ChatGPT on forgetting to extend JPanel to add the class of components:
+https://chatgpt.com/share/6aa31174-c284-83ea-b6ca-7ff31e307e79

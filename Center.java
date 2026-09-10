@@ -13,7 +13,6 @@ import javax.swing.JLabel;
 import javax.swing.JTextArea;
 import javax.swing.SwingConstants;
 import javax.swing.JPanel;
-import javax.swing.JScrollPane;
 
 public class Center {
     private JPanel centerPanel = null;
@@ -28,15 +27,11 @@ public class Center {
         displayLabel.setFont(displayLabel.getFont().deriveFont(Font.BOLD, 18f));
         centerPanel.add(displayLabel, BorderLayout.NORTH);
 
-        textArea = new JTextArea(
-                "This is a JTextArea.\n" +
-                        "You can type anything here.\n" +
-                        "It demonstrates a multi-line component.");
-        textArea.setLineWrap(true);
-        textArea.setWrapStyleWord(true);
+        Score scoreAway = new Score();
+        centerPanel.add(scoreAway, BorderLayout.WEST);
 
-        JScrollPane scrollPane = new JScrollPane(textArea);
-        centerPanel.add(scrollPane, BorderLayout.CENTER);
+        Score scoreHome = new Score();
+        centerPanel.add(scoreHome, BorderLayout.EAST);
     }
 
     // return elements so we can access their attributes
