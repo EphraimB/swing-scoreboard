@@ -1,5 +1,5 @@
 /*
-    Author: Ephraim Becker
+    Author: Ephraim Becker/ Will Camara
 
     Footer.java
 
