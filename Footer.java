@@ -13,11 +13,13 @@ import javax.swing.JButton;
 public class Footer {
     private JPanel footerPanel = null;
     private JButton exitBtn = null;
+    private JButton resetBtn = null;
 
     public Footer() {
         footerPanel = new JPanel(new FlowLayout(FlowLayout.CENTER, 10, 10));
 
-        exitBtn = new JButton("Exit");
+        exitBtn = new JButton("Exit", new ImageIconSwing("img/exit.png", 30));
+        resetBtn = new JButton("Reset");
 
         footerPanel.add(exitBtn);
     }
@@ -28,5 +30,9 @@ public class Footer {
 
     public JButton getExitButton() {
         return exitBtn;
+    }
+
+    public JButton getResetButton() {
+        return resetBtn;
     }
 }
