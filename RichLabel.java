@@ -4,6 +4,7 @@ import java.awt.Graphics;
 import javax.swing.JLabel;
 
 public class RichLabel extends JLabel {
+
     //Horizontal and Vertical Offset Shadows.
     private int leftX = 0;
     private int leftY = 0;
@@ -17,6 +18,7 @@ public class RichLabel extends JLabel {
     public RichLabel(String text) {
         super(text);
     }
+
     //Set positions of the shadows.
     public void setLeftShadow(int x, int y, Color color) {
         leftX = x;
@@ -30,18 +32,22 @@ public class RichLabel extends JLabel {
         rightColor = color;
     }
 //Overide JLabel Painting method to draw shadows.
+
     @Override
     protected void paintComponent(Graphics g) {
 
         int x = getInsets().left;
-        int y = getInsets().right;
+        int y = getInsets().top + g.getFontMetrics().getAscent();
 
-        //Drawing the shadows
+        // Draw left shadow
         g.setColor(leftColor);
         g.drawString(getText(), x + leftX, y + leftY);
+
+        // Draw right shadow
         g.setColor(rightColor);
         g.drawString(getText(), x + rightX, y + rightY);
 
+        // Draw main text
         g.setColor(getForeground());
         g.drawString(getText(), x, y);
     }
