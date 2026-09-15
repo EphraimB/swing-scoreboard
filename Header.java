@@ -23,13 +23,16 @@ public class Header {
         // Create a panel with a centered flow layout
         headerPanel = new JPanel(new FlowLayout(FlowLayout.CENTER, 10, 10));
 
+        // Greeting
         greetingLabel = new JLabel("Name:");
         headerPanel.add(greetingLabel);
 
+        // Set a text field to John Doe
         greetingField = new JTextField(20);
         greetingField.setText("John Doe");
         headerPanel.add(greetingField);
 
+        // Submit button
         updateBtn = new JButton("Submit", new ImageIconSwing("img/green-arrow-png-24.png", 24));
         headerPanel.add(updateBtn);
     }
