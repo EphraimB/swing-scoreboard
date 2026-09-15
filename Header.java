@@ -30,7 +30,7 @@ public class Header {
         greetingField.setText("John Doe");
         headerPanel.add(greetingField);
 
-        updateBtn = new JButton("Submit");
+        updateBtn = new JButton("Submit", new ImageIconSwing("img/green-arrow-png-24.png", 24));
         headerPanel.add(updateBtn);
     }
 
