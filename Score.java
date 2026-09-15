@@ -13,18 +13,30 @@ public class Score extends JPanel {
     private JLabel scoreLabel = null;
     private JButton incrementButton = null;
     private JButton decrementButton = null;
+    private JButton setTeamButton = null;
 
     int score = 0;
 
     public Score() {
+        // Set to border layout
         setLayout(new BorderLayout());
 
         // Team information
         JPanel teamPanel = new JPanel();
         teamPanel.setLayout(new BoxLayout(teamPanel, BoxLayout.Y_AXIS));
-        teamTextField = new JTextField(1);
-        teamPanel.add(teamTextField);
 
+        // Text field + Set button horizontally
+        JPanel teamInputPanel = new JPanel(new FlowLayout());
+
+        teamTextField = new JTextField(10);
+        teamInputPanel.add(teamTextField);
+
+        setTeamButton = new JButton("Set");
+        teamInputPanel.add(setTeamButton);
+
+        teamPanel.add(teamInputPanel);
+
+        // Team label underneath
         teamLabel = new JLabel("Not set");
         teamPanel.add(teamLabel);
 
@@ -61,6 +73,10 @@ public class Score extends JPanel {
                 score--;
             }
             scoreLabel.setText(String.valueOf(score));
+        });
+
+        setTeamButton.addActionListener(e -> {
+            teamLabel.setText(teamTextField.getText());
         });
     }
 
