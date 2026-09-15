@@ -1,2 +1,5 @@
 I got help from ChatGPT on forgetting to extend JPanel to add the class of components:
 https://chatgpt.com/share/6aa31174-c284-83ea-b6ca-7ff31e307e79
+
+I got help from ChatGPT on getting the set button to the right of the text field
+https://chatgpt.com/share/6aa94dc1-420c-83e9-bc99-d45754f2e4e8
