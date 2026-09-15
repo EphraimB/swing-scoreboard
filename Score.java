@@ -32,7 +32,7 @@ public class Score extends JPanel {
         teamTextField = new JTextField(10);
         teamInputPanel.add(teamTextField);
 
-        setTeamButton = new JButton("Set");
+        setTeamButton = new JButton("Set", new ImageIconSwing("img/green-arrow-png-24.png", 24));
         teamInputPanel.add(setTeamButton);
 
         teamPanel.add(teamInputPanel);
