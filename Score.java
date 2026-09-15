@@ -33,14 +33,7 @@ public class Score extends JPanel {
         teamTextField = new JTextField(10);
         teamInputPanel.add(teamTextField);
 
-        ImageIcon icon = new ImageIcon("img/green-arrow-png-24.png");
-
-        Image scaledImage = icon.getImage().getScaledInstance(
-                24, 24, Image.SCALE_SMOOTH);
-
-        ImageIcon scaledIcon = new ImageIcon(scaledImage);
-
-        setTeamButton = new JButton("Set", scaledIcon);
+        setTeamButton = new JButton("Set", new ImageIconSwing("img/green-arrow-png-24.png", 24));
         teamInputPanel.add(setTeamButton);
 
         teamPanel.add(teamInputPanel);
