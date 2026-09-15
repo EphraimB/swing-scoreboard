@@ -1,6 +1,7 @@
 import java.awt.BorderLayout;
+import java.awt.Color;
 import java.awt.FlowLayout;
-
+import java.awt.Font;
 import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JLabel;
@@ -10,7 +11,7 @@ import javax.swing.JTextField;
 public class Score extends JPanel {
     private JTextField teamTextField = null;
     private JLabel teamLabel = null;
-    private JLabel scoreLabel = null;
+    private RichLabel scoreLabel = null;
     private JButton incrementButton = null;
     private JButton decrementButton = null;
     private JButton setTeamButton = null;
@@ -48,8 +49,14 @@ public class Score extends JPanel {
         decrementButton = new JButton("-");
         scorePanel.add(decrementButton);
 
-        scoreLabel = new JLabel("" + score);
+        scoreLabel = new RichLabel("" + score);
         scorePanel.add(scoreLabel);
+
+        scoreLabel.setLeftShadow(3, 3, Color.LIGHT_GRAY);
+        scoreLabel.setRightShadow(-2, -2, Color.DARK_GRAY);
+        scoreLabel.setForeground(Color.BLACK);
+        scoreLabel.setFont(scoreLabel.getFont().deriveFont(Font.BOLD, 48f));
+    
 
         incrementButton = new JButton("+");
         scorePanel.add(incrementButton);
