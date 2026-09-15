@@ -19,9 +19,11 @@ public class Footer {
         footerPanel = new JPanel(new FlowLayout(FlowLayout.CENTER, 10, 10));
 
         exitBtn = new JButton("Exit", new ImageIconSwing("img/exit.png", 30));
-        resetBtn = new JButton("Reset");
+        resetBtn = new JButton("Reset", new ImageIconSwing("img/restart-icon-9.png", 30));
 
+        footerPanel.add(resetBtn);
         footerPanel.add(exitBtn);
+
     }
 
     public JPanel getFooterPanel() {
