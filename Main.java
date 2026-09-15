@@ -32,9 +32,6 @@ public class Main {
                 .addActionListener(
                         e -> center.getDisplayLabel().setText("Hello, " + header.getGreetingField().getText() + "!"));
 
-        // Clear all text from textArea when clearBtn is clicked
-        footer.getClearButton().addActionListener(e -> center.getTextArea().setText(""));
-
         footer.getExitButton().addActionListener(e -> System.exit(0));
 
         frame.setVisible(true);
