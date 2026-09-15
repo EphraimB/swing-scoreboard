@@ -1,7 +1,9 @@
 import java.awt.BorderLayout;
 import java.awt.FlowLayout;
+import java.awt.Image;
 
 import javax.swing.BoxLayout;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -31,7 +33,14 @@ public class Score extends JPanel {
         teamTextField = new JTextField(10);
         teamInputPanel.add(teamTextField);
 
-        setTeamButton = new JButton("Set");
+        ImageIcon icon = new ImageIcon("img/green-arrow-png-24.png");
+
+        Image scaledImage = icon.getImage().getScaledInstance(
+                24, 24, Image.SCALE_SMOOTH);
+
+        ImageIcon scaledIcon = new ImageIcon(scaledImage);
+
+        setTeamButton = new JButton("Set", scaledIcon);
         teamInputPanel.add(setTeamButton);
 
         teamPanel.add(teamInputPanel);
