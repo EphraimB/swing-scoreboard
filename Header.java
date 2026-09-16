@@ -1,7 +1,7 @@
 /*
     Author: Ephraim Becker/ Will Camara
 
-    Footer.java
+    Header.java
 
     Simple Swing based component to hold one label, one text area, and one button.
     Due to the FlowLayout design, this component class is intended to "head" the app.
