@@ -8,6 +8,7 @@
 
 import java.awt.BorderLayout;
 import java.awt.Font;
+import java.awt.event.ActionListener;
 
 import javax.swing.JLabel;
 import javax.swing.SwingConstants;
@@ -19,7 +20,7 @@ public class Center {
     private Score scoreAway = null;
     private Score scoreHome = null;
 
-    public Center() {
+    public Center(ActionListener printListener) {
         centerPanel = new JPanel(new BorderLayout(5, 5));
 
         // This label will display the greeting text from the header component.
@@ -28,11 +29,11 @@ public class Center {
         centerPanel.add(displayLabel, BorderLayout.NORTH);
 
         // Adds away team's score
-        scoreAway = new Score();
+        scoreAway = new Score(printListener);
         centerPanel.add(scoreAway, BorderLayout.WEST);
 
         // Adds home team's score
-        scoreHome = new Score();
+        scoreHome = new Score(printListener);
         centerPanel.add(scoreHome, BorderLayout.EAST);
     }
 

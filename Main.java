@@ -6,17 +6,24 @@ public class Main {
     private static Header header = null;
     private static Center center = null;
 
+    private static ConsolePrint consolePrint = null;
+
+    private static void printToConsole() {
+        consolePrint.print(
+                header.getGreetingField().getText(),
+                center.getScoreAway().getTeamLabel().getText(),
+                center.getScoreAway().getScore(),
+                center.getScoreHome().getTeamLabel().getText(),
+                center.getScoreHome().getScore());
+    }
+
     public static void main(String[] args) {
         SwingUtilities.invokeLater(Main::createAndShowGUI);
     }
 
-    public static void updateSystemWrite() {
-        System.out.println("Name: " + header.getGreetingField().getText());
-        System.out.println(center.getScoreAway().getTeamLabel().getText() + ": " + center.getScoreAway().getScore());
-        System.out.println(center.getScoreHome().getTeamLabel().getText() + ": " + center.getScoreHome().getScore());
-    }
-
     public static void createAndShowGUI() {
+        consolePrint = new ConsolePrint();
+
         // Main window
         JFrame frame = new JFrame("Text Components");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -29,7 +36,7 @@ public class Main {
         frame.add(header.getHeaderPanel(), BorderLayout.NORTH);
 
         /* Center Panel */
-        center = new Center();
+        center = new Center(e -> printToConsole());
         frame.add(center.getCenterPanel(), BorderLayout.CENTER);
 
         /* Footer Panel */
@@ -42,11 +49,8 @@ public class Main {
                         e -> {
                             center.getDisplayLabel().setText("Hello, " + header.getGreetingField().getText() + "!");
 
-                            updateSystemWrite();
+                            printToConsole();
                         });
-
-        System.out.println(center.getScoreAway().getTeamLabel().getText() + ": " + center.getScoreAway().getScore());
-        System.out.println(center.getScoreHome().getTeamLabel() + ": " + center.getScoreHome().getScore());
 
         // Reset all inputs and labels everywhere when the reset button is clicked
         footer.getResetButton().addActionListener(e -> {
@@ -63,8 +67,7 @@ public class Main {
             center.getScoreHome().getTeamLabel().setText("Not set");
             center.getScoreHome().setScore(0);
 
-            // Call the method to print the name and score to the console
-            updateSystemWrite();
+            printToConsole();
         });
 
         // Exits the program

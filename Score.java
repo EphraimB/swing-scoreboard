@@ -2,6 +2,8 @@ import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.FlowLayout;
 import java.awt.Font;
+import java.awt.event.ActionListener;
+
 import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JLabel;
@@ -18,7 +20,8 @@ public class Score extends JPanel {
 
     private int score = 0;
 
-    public Score() {
+    public Score(ActionListener printListener) {
+
         // Set to border layout
         setLayout(new BorderLayout());
 
@@ -66,6 +69,8 @@ public class Score extends JPanel {
         // Update team name when Enter is pressed
         teamTextField.addActionListener(e -> {
             teamLabel.setText(teamTextField.getText());
+
+            printListener.actionPerformed(e);
         });
 
         // Increment score
@@ -73,6 +78,8 @@ public class Score extends JPanel {
             score++;
             scoreLabel.setText(String.valueOf(score));
             decrementButton.setEnabled(true);
+
+            printListener.actionPerformed(e);
         });
 
         // Decrement score. Disables Minus Button when score = 0
@@ -80,14 +87,20 @@ public class Score extends JPanel {
             if (score > 0) {
                 score--;
             }
+
             scoreLabel.setText(String.valueOf(score));
+
             if (score == 0) {
                 decrementButton.setEnabled(false);
             }
+
+            printListener.actionPerformed(e);
         });
 
         setTeamButton.addActionListener(e -> {
             teamLabel.setText(teamTextField.getText());
+
+            printListener.actionPerformed(e);
         });
     }
 
