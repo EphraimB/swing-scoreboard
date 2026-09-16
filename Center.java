@@ -1,17 +1,16 @@
 /*
     Author: Ephraim Becker/ Will Camara
 
-    Footer.java
+    Center.java
 
     Simple Swing based component
 */
 
 import java.awt.BorderLayout;
 import java.awt.Font;
-
 import javax.swing.JLabel;
-import javax.swing.SwingConstants;
 import javax.swing.JPanel;
+import javax.swing.SwingConstants;
 
 public class Center {
     private JPanel centerPanel = null;
