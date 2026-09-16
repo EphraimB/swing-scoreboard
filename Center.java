@@ -10,14 +10,14 @@ import java.awt.BorderLayout;
 import java.awt.Font;
 
 import javax.swing.JLabel;
-import javax.swing.JTextArea;
 import javax.swing.SwingConstants;
 import javax.swing.JPanel;
 
 public class Center {
     private JPanel centerPanel = null;
-    private JTextArea textArea = null;
     private JLabel displayLabel = null;
+    private Score scoreAway = null;
+    private Score scoreHome = null;
 
     public Center() {
         centerPanel = new JPanel(new BorderLayout(5, 5));
@@ -27,10 +27,10 @@ public class Center {
         displayLabel.setFont(displayLabel.getFont().deriveFont(Font.BOLD, 18f));
         centerPanel.add(displayLabel, BorderLayout.NORTH);
 
-        Score scoreAway = new Score();
+        scoreAway = new Score();
         centerPanel.add(scoreAway, BorderLayout.WEST);
 
-        Score scoreHome = new Score();
+        scoreHome = new Score();
         centerPanel.add(scoreHome, BorderLayout.EAST);
     }
 
@@ -43,7 +43,11 @@ public class Center {
         return displayLabel;
     }
 
-    public JTextArea getTextArea() {
-        return textArea;
+    public Score getScoreAway() {
+        return scoreAway;
+    }
+
+    public Score getScoreHome() {
+        return scoreHome;
     }
 }

@@ -33,8 +33,13 @@ public class Main {
                         e -> center.getDisplayLabel().setText("Hello, " + header.getGreetingField().getText() + "!"));
 
         // Clear all text from textArea when clearBtn is clicked
-        // footer.getClearButton().addActionListener(e ->
-        // center.getTextArea().setText(""));
+        footer.getResetButton().addActionListener(e -> {
+            header.getGreetingField().setText("John Doe");
+            center.getScoreAway().getTextField().setText("");
+            center.getScoreAway().getTeamLabel().setText("Not set");
+            center.getScoreHome().getTextField().setText("");
+            center.getScoreHome().getTeamLabel().setText("Not set");
+        });
 
         footer.getExitButton().addActionListener(e -> System.exit(0));
 

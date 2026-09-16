@@ -56,7 +56,6 @@ public class Score extends JPanel {
         scoreLabel.setRightShadow(-2, -2, Color.DARK_GRAY);
         scoreLabel.setForeground(Color.BLACK);
         scoreLabel.setFont(scoreLabel.getFont().deriveFont(Font.BOLD, 48f));
-    
 
         incrementButton = new JButton("+");
         scorePanel.add(incrementButton);
@@ -92,4 +91,7 @@ public class Score extends JPanel {
         return teamTextField;
     }
 
+    public JLabel getTeamLabel() {
+        return teamLabel;
+    }
 }
