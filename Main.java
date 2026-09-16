@@ -32,18 +32,23 @@ public class Main {
                 .addActionListener(
                         e -> center.getDisplayLabel().setText("Hello, " + header.getGreetingField().getText() + "!"));
 
-        // Clear all text from textArea when clearBtn is clicked
+        // Reset all inputs and labels everywhere when the reset button is clicked
         footer.getResetButton().addActionListener(e -> {
+            // Reset greeting
             header.getGreetingField().setText("John Doe");
+
+            // Reset away team's score
             center.getScoreAway().getTextField().setText("");
             center.getScoreAway().getTeamLabel().setText("Not set");
             center.getScoreAway().setScore(0);
 
+            // Reset home team's score
             center.getScoreHome().getTextField().setText("");
             center.getScoreHome().getTeamLabel().setText("Not set");
             center.getScoreHome().setScore(0);
         });
 
+        // Exits the program
         footer.getExitButton().addActionListener(e -> System.exit(0));
 
         frame.setVisible(true);

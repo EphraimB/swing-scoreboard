@@ -27,9 +27,11 @@ public class Center {
         displayLabel.setFont(displayLabel.getFont().deriveFont(Font.BOLD, 18f));
         centerPanel.add(displayLabel, BorderLayout.NORTH);
 
+        // Adds away team's score
         scoreAway = new Score();
         centerPanel.add(scoreAway, BorderLayout.WEST);
 
+        // Adds home team's score
         scoreHome = new Score();
         centerPanel.add(scoreHome, BorderLayout.EAST);
     }

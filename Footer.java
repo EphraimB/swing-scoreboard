@@ -16,16 +16,22 @@ public class Footer {
     private JButton resetBtn = null;
 
     public Footer() {
+        // Flow layout panel
         footerPanel = new JPanel(new FlowLayout(FlowLayout.CENTER, 10, 10));
 
+        // Exit button
         exitBtn = new JButton("Exit", new ImageIconSwing("img/exit.png", 30));
+
+        // Reset button
         resetBtn = new JButton("Reset", new ImageIconSwing("img/restart-icon-9.png", 30));
 
+        // Add both buttons
         footerPanel.add(resetBtn);
         footerPanel.add(exitBtn);
 
     }
 
+    // Getters
     public JPanel getFooterPanel() {
         return footerPanel;
     }
