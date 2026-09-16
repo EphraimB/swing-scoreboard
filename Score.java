@@ -16,7 +16,7 @@ public class Score extends JPanel {
     private JButton decrementButton = null;
     private JButton setTeamButton = null;
 
-    int score = 0;
+    private int score = 0;
 
     public Score() {
         // Set to border layout
@@ -93,5 +93,10 @@ public class Score extends JPanel {
 
     public JLabel getTeamLabel() {
         return teamLabel;
+    }
+
+    public void setScore(int score) {
+        this.score = score;
+        scoreLabel.setText("" + score);
     }
 }

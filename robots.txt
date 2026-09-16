@@ -12,3 +12,6 @@ https://chatgpt.com/share/6aa9a0b8-038c-83ea-a2ef-f895c2e4d33d
 
 I got help from ChatGPT on figuring out why the rich text wasn't showing up:
 https://chatgpt.com/share/6aa9a5a3-ee7c-83ea-a9ef-399733dafe39
+
+I got help from ChatGPT for getting the reset button to fully reset everything back:
+https://chatgpt.com/share/6aaae036-5930-83e9-a6c5-713caa103ace

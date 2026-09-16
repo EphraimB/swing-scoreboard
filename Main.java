@@ -37,8 +37,11 @@ public class Main {
             header.getGreetingField().setText("John Doe");
             center.getScoreAway().getTextField().setText("");
             center.getScoreAway().getTeamLabel().setText("Not set");
+            center.getScoreAway().setScore(0);
+
             center.getScoreHome().getTextField().setText("");
             center.getScoreHome().getTeamLabel().setText("Not set");
+            center.getScoreHome().setScore(0);
         });
 
         footer.getExitButton().addActionListener(e -> System.exit(0));
