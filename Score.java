@@ -100,6 +100,10 @@ public class Score extends JPanel {
         return teamLabel;
     }
 
+    public int getScore() {
+        return score;
+    }
+
     // Sets the score
     public void setScore(int score) {
         this.score = score;
