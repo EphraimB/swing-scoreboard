@@ -47,6 +47,7 @@ public class Score extends JPanel {
         JPanel scorePanel = new JPanel(new FlowLayout());
 
         decrementButton = new JButton("-");
+        decrementButton.setEnabled(false);
         scorePanel.add(decrementButton);
 
         scoreLabel = new RichLabel("" + score);
@@ -72,14 +73,18 @@ public class Score extends JPanel {
         incrementButton.addActionListener(e -> {
             score++;
             scoreLabel.setText(String.valueOf(score));
+            decrementButton.setEnabled(true);
         });
 
-        // Decrement score
+        // Decrement score. Disables Minus Button when score = 0
         decrementButton.addActionListener(e -> {
             if (score > 0) {
                 score--;
             }
             scoreLabel.setText(String.valueOf(score));
+            if (score == 0) {
+                decrementButton.setEnabled(false);
+            }
         });
 
         setTeamButton.addActionListener(e -> {
