@@ -1,7 +1,7 @@
 /*
     Author: Ephraim Becker/ Will Camara
 
-    Footer.java
+    Center.java
 
     Simple Swing based component
 */
@@ -11,8 +11,8 @@ import java.awt.Font;
 import java.awt.event.ActionListener;
 
 import javax.swing.JLabel;
-import javax.swing.SwingConstants;
 import javax.swing.JPanel;
+import javax.swing.SwingConstants;
 
 public class Center {
     private JPanel centerPanel = null;
