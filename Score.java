@@ -3,12 +3,19 @@ import java.awt.Color;
 import java.awt.FlowLayout;
 import java.awt.Font;
 import java.awt.event.ActionListener;
-
 import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
+
+/*
+    Author: Ephraim Becker/ Will Camara
+
+    Score.java
+
+    Creates the team scoreboard inputs
+*/
 
 public class Score extends JPanel {
     private JTextField teamTextField = null;

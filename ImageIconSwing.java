@@ -1,5 +1,11 @@
-import java.awt.Image;
+/*
+    Author: Ephraim Becker/ Will Camara
 
+    ImageIconSwing.java
+
+    Creates and resizes the image icon
+*/
+import java.awt.Image;
 import javax.swing.ImageIcon;
 
 public class ImageIconSwing extends ImageIcon {

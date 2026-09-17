@@ -1,6 +1,13 @@
+/*
+    Author: Ephraim Becker/ Will Camara
+
+    Main.java
+
+    Driver program
+*/
+import java.awt.BorderLayout;
 import javax.swing.JFrame;
 import javax.swing.SwingUtilities;
-import java.awt.BorderLayout;
 
 public class Main {
     private static Header header = null;

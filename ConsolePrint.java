@@ -1,3 +1,10 @@
+/*
+    Author: Ephraim Becker/ Will Camara
+
+    ConesolePrint.java
+
+    Prints the name and scoreboard to the console.
+*/
 public class ConsolePrint {
 
     public void print(

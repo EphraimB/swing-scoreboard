@@ -1,4 +1,10 @@
+/*
+    Author: Ephraim Becker/ Will Camara
 
+    RichLabel.java
+
+   Extends the Jlabel, creates custom text label with a 3d drop shadow effect 
+*/
 import java.awt.Color;
 import java.awt.Graphics;
 import javax.swing.JLabel;
