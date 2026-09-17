@@ -18,3 +18,6 @@ https://chatgpt.com/share/6aaae036-5930-83e9-a6c5-713caa103ace
 
 I got help from stack overflow to help me figure out how to disable the decrement button when the score = 0:
 https://stackoverflow.com/questions/48494115/setenabledfalse-does-exactly-what-again
+
+I got help from ChatGPT on how to have reusable code on writing to the console:
+https://chatgpt.com/share/6aabea09-b608-83e9-8957-1cb769d7e7fe
